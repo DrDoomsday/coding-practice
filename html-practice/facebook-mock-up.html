@@ -16,6 +16,7 @@
 				height: 45px;
 				width: 100%;
 				margin: 0;
+				z-index: 100;
 			}
 			#search-bar {
 				position: fixed;
@@ -27,18 +28,30 @@
 				border: 1px solid black;
 				border-radius: 5px;
 			}
+			.clearfix {
+				overflow: auto;
+			}
 			.content {
-				width: 1200px;
+				width: 976px;
 				height: 1000px;
 				margin: 55px auto;
+				position: relative;
+			}
+			.main-column {
+				float: left;
+				box-sizing: border-box;
+				display: block;
+			}
+			.content-feed {
+				width: 58%;
+				margin: 0 1%;
 			}
 			.status-box {
 				background-color: white;
 				border: 1px solid #e9eaed;
 				margin-bottom: 10px;
-				margin-left: 200px;
 				height: 160px;
-				width: 525px;
+				box-sizing: border-box;
 			}
 			.status-box-options {
 				color: blue;
@@ -90,10 +103,8 @@
 				background-color: white;
 				border: 1px solid #e9eaed;
 				margin-bottom: 10px;
-				margin-left: 200px;
 				height: 120px;
 				padding-top: 10px;
-				width: 525px;
 			}
 			#sample-status-title {
 				color: #3a5795;
@@ -107,13 +118,6 @@
 				width: 50px;
 				float: left;
 				margin-left: 5px;
-			}
-			#sample-status p {
-				position: relative;
-				top: 25px;
-				text-align: left;
-				padding: 10px 0;
-				margin: 10px;
 			}
 			.sample-status-options {
 				display: inline-block;
@@ -129,65 +133,67 @@
 			}
 			#profile-content {
 				height: 700px;
-				width: 175px;
+				width: 15%;
 				background-color: white;
 				border: 1px solid #e9eaed;
-				display: inline-block;
-				float: left;
-				margin-left: 20px;
 			}
 			#ad-content {
 				height: 700px;
-				width: 250px;
+				width: 25%;
 				background-color: white;
 				border: 1px solid #e9eaed;
-				display: inline-block;
-				float: right;
-				position: fixed;
-				right: 400px;
 			}
 		</style>
 	</head>
 	<body>
-		<header id="facebook-menu-bar"></header>
+		<header id="facebook-menu-bar">
+			<input type="text" id="search-bar" placeholder="Search Facebook">
+		</header>
 		<main class="content">
-			<div id="profile-content">
+			<div class="main-column" id="profile-content">
 				<div> Russell Ripley </div>
 				<div> Edit Profile </div>
 			</div>
-			<div id="ad-content">
-			</div>
-			<input type="text" id="search-bar" placeholder="Search Facebook">
-			<div class="status-box">
-				<ul class="status-box-options">
-					<li>Update Status</li>
-					<li>Add Photos/Video</li>
-					<li>Create Photo Album</li>
-				</ul>
-				<div class="status-update-input">
-				<img src="logo.png">
-				<input type="text" placeholder="What's on your mind?">
-				</div>
-				<div>
-					<ul class="status-update-options">
-						<li>Photo</li>
-						<li>Tag</li>
-						<li>Smile</li>
-						<li>Location</li>
-						<li><input type="button" id="status-privacy" value="Post"></li>
-						<li><input type="button" id="status-post" value="Friends"></li>
+			<div class="content-feed main-column">
+				<div class="status-box">
+					<ul class="status-box-options">
+						<li>Update Status</li>
+						<li>Add Photos/Video</li>
+						<li>Create Photo Album</li>
 					</ul>
+					<div class="status-update-input">
+					<img src="logo.png">
+					<input type="text" placeholder="What's on your mind?">
+					</div>
+					<div>
+						<ul class="status-update-options">
+							<li>Photo</li>
+							<li>Tag</li>
+							<li>Smile</li>
+							<li>Location</li>
+							<li><input type="button" id="status-privacy" value="Post"></li>
+							<li><input type="button" id="status-post" value="Friends"></li>
+						</ul>
+					</div>
+				</div>
+				<div id="sample-status">
+					<div class="clearfix"> 
+						<img src="logo.png">
+						<span id="sample-status-title"> Russell Ripley </span>
+					</div>
+					<div>
+						<p>Fun times watching the Office.</p>
+					</div>
+					<div>
+						<ul class="sample-status-options">
+							<li>Like</li>
+							<li>Comment</li>
+							<li>Share</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			<div id="sample-status">
-				<img src="logo.png">
-				<span id="sample-status-title"> Russell Ripley </span>
-				<p>Fun times watching the Office.</p>
-				<ul class="sample-status-options">
-					<li>Like</li>
-					<li>Comment</li>
-					<li>Share</li>
-				</ul>
+			<div class="main-column" id="ad-content">
 			</div>
 		</main>
 	</body>
