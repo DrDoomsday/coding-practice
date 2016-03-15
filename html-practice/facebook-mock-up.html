@@ -7,6 +7,8 @@
 			body {
 				background-color: #e9eaed;
 				margin: 0;
+				font-family: Arial;
+				font-size: 13px;
 			}
 			#facebook-menu-bar {
 				background-color: #3a5795;
@@ -35,7 +37,6 @@
 				width: 976px;
 				height: 1000px;
 				margin: 55px auto;
-				position: relative;
 			}
 			.main-column {
 				float: left;
@@ -50,7 +51,7 @@
 				background-color: white;
 				border: 1px solid #e9eaed;
 				margin-bottom: 10px;
-				height: 160px;
+				height: 140px;
 				box-sizing: border-box;
 			}
 			.status-box-options {
@@ -84,6 +85,7 @@
 				float: left;
 			}
 			.status-update-options {
+				float: left;
 				display: inline-block;
 				list-style-type: none;
 				width: 100%;
@@ -99,11 +101,18 @@
 				float: right;
 				margin: 5px;
 			}
+			#status-box-buttons {
+				float: right;
+				display: inline-block;
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
 			#sample-status {
 				background-color: white;
 				border: 1px solid #e9eaed;
 				margin-bottom: 10px;
-				height: 120px;
+				height: 140px;
 				padding-top: 10px;
 			}
 			#sample-status-title {
@@ -119,6 +128,9 @@
 				float: left;
 				margin-left: 5px;
 			}
+			#sample-status p {
+				margin-left: 5px;
+			}
 			.sample-status-options {
 				display: inline-block;
 				list-style-type: none;
@@ -131,11 +143,35 @@
 				float: left;
 				padding: 5px;
 			}
-			#profile-content {
+			.profile-content {
 				height: 700px;
 				width: 15%;
-				background-color: white;
-				border: 1px solid #e9eaed;
+				background-color: #e9eaed;
+				line-height: 150%;
+			}
+			.favorites-formatting {
+				float: left;
+				display: inline-block;
+				list-style-type: none;
+				width: 80%;
+				margin: 0;
+				padding: 0;
+			}
+			.favorites-formatting li {
+				list-style-type: none;
+				text-align: left;
+			}
+			#spacing {
+				padding-top: 5px;
+			}
+			.profile-content-header {
+				color: #666;
+				margin: 0;
+				padding: 5px 0 0;
+			}
+			#favorites-list-formatting {
+				padding: 0;
+				margin: 0;
 			}
 			#ad-content {
 				height: 700px;
@@ -150,33 +186,62 @@
 			<input type="text" id="search-bar" placeholder="Search Facebook">
 		</header>
 		<main class="content">
-			<div class="main-column" id="profile-content">
+			<section class="main-column profile-content">
 				<div> Russell Ripley </div>
 				<div> Edit Profile </div>
-			</div>
-			<div class="content-feed main-column">
-				<div class="status-box">
+				<div class="favorites-formatting">
+					<h5 class="profile-content-header"> FAVORITES </h5>
+					<ul id="favorites-list-formatting">
+						<li>News Feed </li>
+						<li>Messages </li>
+						<li>Events </li>
+						<li>Saved </li>
+					</ul>
+				</div>
+				<div class="favorites-formatting">
+					<h5 class="profile-content-header" id="spacing"> GROUPS </h5>
+					<ul id="favorites-list-formatting">
+						<li>azPHP</li>
+						<li>REVOLUTION RECHARGE</li>
+						<li>the CURAHEE</li>
+						<li>Prayer &amp; Praises</li>
+					</ul>
+				</div>
+				<div class="favorites-formatting">
+					<h5 class="profile-content-header"> APPS </h5>
+					<ul id="favorites-list-formatting">
+						<li>Games</li>
+						<li>On this Day</li>
+						<li>Jelly Splash</li>
+						<li>Pokes</li>
+					</ul>
+				</div>
+			</section>
+			<section class="content-feed main-column">
+				<section class="status-box">
 					<ul class="status-box-options">
 						<li>Update Status</li>
 						<li>Add Photos/Video</li>
 						<li>Create Photo Album</li>
 					</ul>
 					<div class="status-update-input">
-					<img src="logo.png">
-					<input type="text" placeholder="What's on your mind?">
+						<img src="logo.png">
+						<input type="text" placeholder="What's on your mind?">
 					</div>
 					<div>
-						<ul class="status-update-options">
-							<li>Photo</li>
-							<li>Tag</li>
-							<li>Smile</li>
-							<li>Location</li>
-							<li><input type="button" id="status-privacy" value="Post"></li>
-							<li><input type="button" id="status-post" value="Friends"></li>
-						</ul>
+						<div>
+							<ul class="status-update-options">
+								<li>Photo</li>
+								<li>Tag</li>
+								<li>Smile</li>
+								<li>Location</li>
+								<li id="status-box-buttons"><input type="button" value="Post"></li>
+								<li id="status-box-buttons"><input type="button" value="Friends"></li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div id="sample-status">
+				</section>
+				<section id="sample-status">
 					<div class="clearfix"> 
 						<img src="logo.png">
 						<span id="sample-status-title"> Russell Ripley </span>
@@ -191,8 +256,8 @@
 							<li>Share</li>
 						</ul>
 					</div>
-				</div>
-			</div>
+				</section>
+			</section>
 			<div class="main-column" id="ad-content">
 			</div>
 		</main>
