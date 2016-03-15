@@ -1,0 +1,160 @@
+<!--The 2 div elements deal with max-width and margin:auto-->
+<!-- The Position Property is used for positioning an element
+	 can be static, relative, fixed, or absolute -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			li {
+				display: inline;
+			}
+
+			span {
+				display: block;
+			}
+
+			h1.hidden {
+				display: none;
+			}
+
+			h1.space {
+				visibility: hidden;
+			}
+
+			div.ex1 {
+				width: 500px;
+				margin: auto;
+				border: 3px solid #8AC007;
+			}
+
+			div.ex2 {
+				max-width: 500px;
+				margin: auto;
+				border: 3px solid #8AC007;
+			}
+
+			div.static {
+						position: static;
+						border: 3px solid #8AC007;
+			}
+
+			div.relative {
+							position: relative;
+							left: 30px;
+							margin: 30px;
+							border: 3px solid #8AC007;
+							width: 400px;
+							height: 200px;
+			}
+
+
+			div.absolute {
+							position: absolute;
+							bottom: 10px;
+							right: 10px;
+							width: 300px;
+							border: 3px solid #8AC007;
+			}
+
+			div.fixed {
+						position: fixed;
+						top: 0;
+						right: 0;
+						width: 300px;
+						border: 3px solid #8AC007;
+						margin: 0px;
+			}
+
+			img {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				z-index: -1;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<p>
+			Display a list of links as a horizontal menu:
+		</p>
+
+		<img src="/coding practice/CSS practice/jesus.jpg" width="100" height="140">
+
+		<li>
+			<a href="/HTML%20Practice/block.html"target="_blank">
+			HTML
+			</a>
+		</li>
+
+		<li>
+			<a href="/CSS Practice/CSS Font.html"target="_blank">
+			CSS
+			</a>
+		</li>
+
+		<li>
+			<a href="/Java Practice/Java Practice.html"target="_blank">
+			JavaScript
+			</a>
+		</li>
+
+		<span>
+			A display property with a value of "block" results in
+		</span>
+
+		<span>
+			a line break between the two elements.
+		</span>
+
+		<h1>
+			This is a visible heading
+		</h1>
+
+		<h1 class="hidden">
+			This is a hidden heading
+		</h1>
+
+			<p>
+				<strong>Note:</strong>
+				<br>The h1 element that is hidden does not take up any space.
+			</p>
+
+		<h1 class="space">
+			This is a hidden heading.
+		</h1>
+
+			<p>
+				<strong>Note:</strong>
+				<br> The h1 element that is hidden but set as visibility: hidden; does take up space.
+			</p>
+
+		<div class="ex1">
+			This div element has width: 500px;</div>
+		<br>
+
+		<div class="ex2">
+			This div element has max-width: 500px;
+		</div>
+
+			<p>
+				<strong>Tip:</strong>
+				Drag the browser window to smaller than 500px wide, to see the difference between the two divs!
+
+		<div class="static">
+			This element is coded with position:static; which doesn't position the text in any special way. it's positioned according to the normal flow of the page.
+		</div>
+
+		<div class="relative">
+			This element is coded with position:relative; which positions the text relative to it's normal position.
+			<div class="absolute">
+			This element is coded with position:absolute; which positions the text relative to the nearest positioned ancestor.
+			</div>
+		</div>
+
+		<div class="fixed">
+			This element is coded as position:fixed; which positions the text in the same place even if the page is scrolled.
+	</body>
+</html>
+
+<!--Have Paul help with the links -->

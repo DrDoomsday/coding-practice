@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+				function myFunction() {
+					document.getElementById("demo").innerHTML = "Paragraph changed.";
+				}
+		</script>
+	</head>
+	
+	<body>
+
+		<h1>
+			JavaScript in Head
+		</h1>
+
+		<p id="demo">
+			A Paragraph
+		</p>
+
+		<button type="button"onclick="myFunction()">
+			Try it
+		</button>
+
+		<p id="body">
+			A Paragraph
+		</p>
+
+		<button type="button"onclick="myBunction()">
+			Try it
+		</button>
+
+		<script>
+			function myBunction() {
+				document.getElementById("body").innerHTML = "Paragraph changed.";
+			}
+		</script>
+	</body>
+</html>

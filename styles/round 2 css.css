@@ -1,0 +1,13 @@
+body.background {
+	background-color: 121212;
+}
+
+h1.title {
+	font-family: Courier;
+	font-weight: bold;
+	color: blue;
+}
+p.support {
+	font-family: Arial;
+	color: 886600;
+}

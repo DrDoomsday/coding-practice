@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			a:link {
+				color: #FF0000;
+			}
+
+			a:visited {
+				color: #00FF00;
+			}
+
+			a.highlight:hover {
+				color: #FF00FF;
+			}
+
+			a:active {
+				color: #0000FF;
+			}
+
+			p:first-child i {
+				color: blue;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<p>
+			<b> <!--This link will highlight. The other won't-->
+			<a class="highlight"href="https://google.com"target="_blank">
+				<i>This</i> is Google. <i>This</i> is Google.
+				</a>
+			</b>
+		</p>
+
+		<p>
+			<a href="https://yahoo.com">
+				<i>This</i> is Yahoo. <i>This</i> is Yahoo.
+			</a>
+		</p>
+	</body>
+</html>

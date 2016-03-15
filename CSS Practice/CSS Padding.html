@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			p {
+				background-color: yellow;
+			}
+
+			p.padding {
+				padding-top: 25px;
+				padding-right: 50px;
+				padding-bottom: 25px;
+				padding-left: 50px; 
+			}
+
+			p.shorthand {
+				padding: 25px 50px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p>
+			This paragraph has no specified padding.
+		</p>
+
+		<p class="padding">
+			This paragraph has specified padding.
+		</p>
+
+		<p class="shorthand">
+			This paragraph has shorthand padding.
+			<br>2 numbers- 25px and 50px.
+			<br>1st number-top/bottom padding.
+			<br>2nd number-right/left padding.
+			<br>Order-top,right,bottom,left if 4 numbers are used.
+	</body>
+</html>

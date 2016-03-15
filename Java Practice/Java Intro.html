@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>
+			What Can JavaScript Do?
+		</h1>
+
+		<p id="demo">
+			JavaScript can change HTML content.
+		</p>
+		<!--This example uses the method to "find" an HTML element (with id="demo), and changes the element content (innerHTML) to "Hello JavaScript") -->
+		<button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">
+			Click Me!
+		</button>
+
+		<!-- Changes the style of an HTML elemtn, is a variant of changing an HTML attribute -->
+
+		<p id="element">
+			JavaScript can change the style of an HTML element.
+		</p>
+
+		<script>
+			function myFunction() {
+				var x =
+						document.getElementById("element");
+						x.style.fontSize = "25px";
+						x.style.color ="red";
+			}
+		</script>
+
+		<button type="button" onclick="myFunction()">
+			Click Me!
+		</button>
+
+		<!-- JavaScript Can Validate Data -->
+
+		<h1>
+			JavaScript Can Validate Input
+		</h1>
+
+		<p>
+			Please input a number between 1 and 10:
+		</p>
+
+		<input id="numb" type="number">
+
+		<button type="button" onclick="myFunction()">
+			Submit
+		</button>
+
+		<p id="box"></p>
+
+		<script>
+			function myFunction() {
+				var x, text;
+
+			x = document.getElementById("numb").value;
+
+			if (isNaN(x) || x < 1 || x > 10) {
+					text = "Input not valid";
+				} else {
+					text = "Input OK";
+				}
+			document.getElementById("box").innerHTML = text;
+		}
+		</script>
+	</body>
+</html>
+

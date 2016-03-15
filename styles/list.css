@@ -1,0 +1,11 @@
+h2.first {
+	font-weight: bold;
+	font-family: courier;
+	font-size: 300%;
+	color: blue;
+}
+
+ul.bullet {
+	font-size: 300%;
+	color: red;
+}

@@ -1,0 +1,81 @@
+<!-- Header, sidebar, content, ads -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			table {
+				border: 1px solid black;
+				width: 100%;
+				height: 100%;
+				border-collapse: collapse;
+				box-sizing: border-box;
+				margin: 0;
+				min-width: 666px;
+			}
+
+			td {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+
+			td.facebook {
+				background-color: lightblue;
+				color: #FFFFFF;
+				font-size: 18px;
+			}
+
+			html, body {
+				height: 100%;
+				margin: 0;
+			}
+
+			tr.header {
+				height: 50px;
+			}
+
+			tr.main {
+				vertical-align: top;
+			}
+
+			td.sidebar {
+				width: 20%;
+			}
+
+			td.content {
+				width: 50%;
+				text-align: center;
+			}
+
+			td.ads {
+				width: 25%;
+				text-align: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<table>
+			<tbody>
+				<tr class="header">
+					<td class="facebook" colspan="3">
+						Facebook
+					</td>
+				</tr>
+
+				<tr class="main">
+					<td class="sidebar">
+						Sidebar
+					</td>
+				
+					<td class="content">
+						Content
+					</td>
+				
+					<td class="ads">
+						Ads
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
