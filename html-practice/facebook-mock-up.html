@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+			html {
+			}
+			body {
+				background-color: #e9eaed;
+				margin: 0;
+				font-family: Arial;
+				font-size: 13px;
+			}
+			#facebook-menu-bar {
+				background-color: #3a5795;
+				color: white;
+				position: fixed;
+				top: 0;
+				height: 45px;
+				width: 100%;
+				margin: 0;
+				z-index: 100;
+			}
+			.facebook-menu-items {
+				float: right;
+			}
+			#facebook-menu-list {
+				list-style-type: none;
+				display: inline-block;
+			}
+			#facebook-menu-list a {
+				text-decoration: none;
+				color: white;
+			}
+			#search-bar {
+				position: fixed;
+				top: 7px;
+				left: 500px;
+				width: 450px;
+				height: 15px;
+				padding: 5px;
+				border: 1px solid black;
+				border-radius: 5px;
+			}
+			.clearfix {
+				overflow: auto;
+			}
+			.content {
+				width: 976px;
+				height: 1000px;
+				margin: 55px auto;
+			}
+			.main-column {
+				float: left;
+				box-sizing: border-box;
+				display: block;
+			}
+			.content-feed {
+				width: 58%;
+				margin: 0 1%;
+			}
+			.status-box {
+				background-color: white;
+				border: 1px solid #e9eaed;
+				margin-bottom: 10px;
+				height: 140px;
+				box-sizing: border-box;
+			}
+			.status-box-options {
+				color: blue;
+				border-bottom: 1px solid #e9eaed;
+				list-style-type: none;
+				display: inline-block;
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			.status-box-options li {
+				float: left;
+				padding: 5px;
+				border-right: 1px solid #e9eaed;
+				color: #3a5795;
+				font-weight: bold;
+			}
+			.status-update-input img {
+				height: 40px;
+				width: 40px;
+				float: left;
+				margin-left: 5px;
+			}
+			.status-update-input input{
+				margin-left: 5px;
+				width: 80%;
+				padding: 15px;
+				border: none;
+				height: 40px;
+				float: left;
+			}
+			.status-update-options {
+				float: left;
+				display: inline-block;
+				list-style-type: none;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				border-top: 1px solid #e9eaed;
+			}
+			.status-update-options li {
+				float: left;
+				padding: 5px;
+			}
+			.status-update-options input {
+				float: right;
+				margin: 5px;
+			}
+			#status-box-buttons {
+				float: right;
+				display: inline-block;
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+			#sample-status {
+				background-color: white;
+				border: 1px solid #e9eaed;
+				margin-bottom: 10px;
+				height: 140px;
+				padding-top: 10px;
+			}
+			#sample-status-title {
+				color: #3a5795;
+				margin-left: 10px;
+				font-weight: bold;
+				font-family: sans-serif;
+				font-size: 14px;
+			}
+			#sample-status img {
+				height: 50px;
+				width: 50px;
+				float: left;
+				margin-left: 5px;
+			}
+			#sample-status p {
+				margin-left: 5px;
+			}
+			.sample-status-options {
+				display: inline-block;
+				list-style-type: none;
+				width: 100%;
+				margin: 10px 0;
+				padding: 0;
+				border-top: 1px solid #e9eaed;
+			}
+			.sample-status-options li {
+				float: left;
+				padding: 5px;
+			}
+			.profile-content {
+				height: 700px;
+				width: 15%;
+				background-color: #e9eaed;
+				line-height: 150%;
+			}
+			.sidecontent-formatting {
+				float: left;
+				display: inline-block;
+				list-style-type: none;
+				width: 80%;
+				margin: 0;
+				padding: 0;
+			}
+			#spacing {
+				padding-top: 5px;
+			}
+			.sidecontent-header {
+				color: #666;
+				margin: 0;
+				padding: 5px 0 0;
+			}
+			#sidecontent-list-formatting {
+				padding: 0;
+				margin: 0;
+				list-style-type: none;
+				text-align: left;
+			}
+			#ad-content {
+				height: 400px;
+				width: 242px;
+				background-color: white;
+				border: 1px solid #e9eaed;
+				padding-top: 15px;
+				position: fixed;
+			}
+			#ad-header {
+				border-top: 1px solid #e9eaed;
+				border-bottom: 1px solid #e9eaed;
+				padding: 10px 10px;
+			}
+			#adcontent-list-formatting {
+				padding: 10px 15px;
+				margin: 0;
+				list-style-type: none;
+				text-align: left;
+			}
+			#ad-links {
+				text-decoration: none;
+				line-height: 175%;
+			}
+			#see-more-button {
+				color: blue;
+				padding-left: 15px;
+			}
+			#see-all-button {
+				color: blue;
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<header id="facebook-menu-bar">
+			<input type="text" id="search-bar" placeholder="Search Facebook">
+			<ul class="facebook-menu-items">
+				<li id="facebook-menu-list"><a href="#">Russell</a></li>
+				<li id="facebook-menu-list"><a href="#">Home</a></li>
+				<li id="facebook-menu-list"><a href="#">Find Friends</a></li>
+				<li id="facebook-menu-list"><a href="#">Menu Items</a></li>
+		</header>
+		<main class="content">
+			<section class="main-column profile-content">
+				<div> Russell Ripley </div>
+				<div> Edit Profile </div>
+				<div class="sidecontent-formatting">
+					<h5 class="sidecontent-header"> FAVORITES </h5>
+					<ul id="sidecontent-list-formatting">
+						<li>News Feed </li>
+						<li>Messages </li>
+						<li>Events </li>
+						<li>Saved </li>
+					</ul>
+				</div>
+				<div class="sidecontent-formatting">
+					<h5 class="sidecontent-header" id="spacing"> GROUPS </h5>
+					<ul id="sidecontent-list-formatting">
+						<li>azPHP</li>
+						<li>REVOLUTION RECHARGE</li>
+						<li>the CURAHEE</li>
+						<li>Prayer &amp; Praises</li>
+					</ul>
+				</div>
+				<div class="sidecontent-formatting">
+					<h5 class="sidecontent-header"> APPS </h5>
+					<ul id="sidecontent-list-formatting">
+						<li>Games</li>
+						<li>On this Day</li>
+						<li>Jelly Splash</li>
+						<li>Pokes</li>
+					</ul>
+				</div>
+			</section>
+			<section class="content-feed main-column">
+				<section class="status-box">
+					<ul class="status-box-options">
+						<li>Update Status</li>
+						<li>Add Photos/Video</li>
+						<li>Create Photo Album</li>
+					</ul>
+					<div class="status-update-input">
+						<img src="logo.png">
+						<input type="text" placeholder="What's on your mind?">
+					</div>
+					<div>
+						<div>
+							<ul class="status-update-options">
+								<li>Photo</li>
+								<li>Tag</li>
+								<li>Smile</li>
+								<li>Location</li>
+								<li id="status-box-buttons"><input type="button" value="Post"></li>
+								<li id="status-box-buttons"><input type="button" value="Friends"></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section id="sample-status">
+					<div class="clearfix"> 
+						<img src="logo.png">
+						<span id="sample-status-title"> Russell Ripley </span>
+					</div>
+					<div>
+						<p>Fun times watching the Office.</p>
+					</div>
+					<div>
+						<ul class="sample-status-options">
+							<li>Like</li>
+							<li>Comment</li>
+							<li>Share</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+			<div class="main-column sidecontent-formatting" id="ad-content">
+				<h5 class="sidecontent-header" id="ad-header"> Trending </h5>
+					<ul id="adcontent-list-formatting">
+						<li><a href="#" id="ad-links">Topic 1</a></li>
+						<li><a href="#" id="ad-links">Topic 2</a></li>
+						<li><a href="#" id="ad-links">Topic 3</a></li>
+					</ul>
+					<p id="see-more-button"> See more </p>
+				<h5 class="sidecontent-header" id="ad-header"> Suggested Pages <span id="see-all-button"> See all </span></h5>
+			</div>
+		</main>
+	</body>
+</html>
