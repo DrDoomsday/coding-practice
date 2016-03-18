@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				$("h1").on("click", function(){
+					$(this).hide();
+				});
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+			$("input").on("change", function(){
+				alert("the text has been changed.");
+			});
+		});
+		</script>
+	</head>
+
+	<body>
+		<h1>
+			Hide
+		</h1>
+
+		<p>
+			Text box:<br><input type="text">
+		</p>
+	</body>
+</html>

@@ -20,10 +20,21 @@
 				margin: 0;
 				z-index: 100;
 			}
+			.facebook-menu-items {
+				float: right;
+			}
+			#facebook-menu-list {
+				list-style-type: none;
+				display: inline-block;
+			}
+			#facebook-menu-list a {
+				text-decoration: none;
+				color: white;
+			}
 			#search-bar {
 				position: fixed;
 				top: 7px;
-				left: 240px;
+				left: 500px;
 				width: 450px;
 				height: 15px;
 				padding: 5px;
@@ -149,7 +160,7 @@
 				background-color: #e9eaed;
 				line-height: 150%;
 			}
-			.favorites-formatting {
+			.sidecontent-formatting {
 				float: left;
 				display: inline-block;
 				list-style-type: none;
@@ -157,14 +168,10 @@
 				margin: 0;
 				padding: 0;
 			}
-			.favorites-formatting li {
-				list-style-type: none;
-				text-align: left;
-			}
 			#spacing {
 				padding-top: 5px;
 			}
-			.profile-content-header {
+			.sidecontent-header {
 				color: #666;
 				margin: 0;
 				padding: 5px 0 0;
@@ -179,37 +186,79 @@
 				background-color: white;
 				border: 1px solid #e9eaed;
 			}
+			#sidecontent-list-formatting {
+				padding: 0;
+				margin: 0;
+				list-style-type: none;
+				text-align: left;
+			}
+			#ad-content {
+				height: 400px;
+				width: 242px;
+				background-color: white;
+				border: 1px solid #e9eaed;
+				padding-top: 15px;
+				position: fixed;
+			}
+			#ad-header {
+				border-top: 1px solid #e9eaed;
+				border-bottom: 1px solid #e9eaed;
+				padding: 10px 10px;
+			}
+			#adcontent-list-formatting {
+				padding: 10px 15px;
+				margin: 0;
+				list-style-type: none;
+				text-align: left;
+			}
+			#ad-links {
+				text-decoration: none;
+				line-height: 175%;
+			}
+			#see-more-button {
+				color: blue;
+				padding-left: 15px;
+			}
+			#see-all-button {
+				color: blue;
+				float: right;
+			}
 		</style>
 	</head>
 	<body>
 		<header id="facebook-menu-bar">
 			<input type="text" id="search-bar" placeholder="Search Facebook">
+			<ul class="facebook-menu-items">
+				<li id="facebook-menu-list"><a href="#">Russell</a></li>
+				<li id="facebook-menu-list"><a href="#">Home</a></li>
+				<li id="facebook-menu-list"><a href="#">Find Friends</a></li>
+				<li id="facebook-menu-list"><a href="#">Menu Items</a></li>
 		</header>
 		<main class="content">
 			<section class="main-column profile-content">
 				<div> Russell Ripley </div>
 				<div> Edit Profile </div>
-				<div class="favorites-formatting">
-					<h5 class="profile-content-header"> FAVORITES </h5>
-					<ul id="favorites-list-formatting">
+				<div class="sidecontent-formatting">
+					<h5 class="sidecontent-header"> FAVORITES </h5>
+					<ul id="sidecontent-list-formatting">
 						<li>News Feed </li>
 						<li>Messages </li>
 						<li>Events </li>
 						<li>Saved </li>
 					</ul>
 				</div>
-				<div class="favorites-formatting">
-					<h5 class="profile-content-header" id="spacing"> GROUPS </h5>
-					<ul id="favorites-list-formatting">
+				<div class="sidecontent-formatting">
+					<h5 class="sidecontent-header" id="spacing"> GROUPS </h5>
+					<ul id="sidecontent-list-formatting">
 						<li>azPHP</li>
 						<li>REVOLUTION RECHARGE</li>
 						<li>the CURAHEE</li>
 						<li>Prayer &amp; Praises</li>
 					</ul>
 				</div>
-				<div class="favorites-formatting">
-					<h5 class="profile-content-header"> APPS </h5>
-					<ul id="favorites-list-formatting">
+				<div class="sidecontent-formatting">
+					<h5 class="sidecontent-header"> APPS </h5>
+					<ul id="sidecontent-list-formatting">
 						<li>Games</li>
 						<li>On this Day</li>
 						<li>Jelly Splash</li>
@@ -258,7 +307,15 @@
 					</div>
 				</section>
 			</section>
-			<div class="main-column" id="ad-content">
+			<div class="main-column sidecontent-formatting" id="ad-content">
+				<h5 class="sidecontent-header" id="ad-header"> Trending </h5>
+					<ul id="adcontent-list-formatting">
+						<li><a href="#" id="ad-links">Topic 1</a></li>
+						<li><a href="#" id="ad-links">Topic 2</a></li>
+						<li><a href="#" id="ad-links">Topic 3</a></li>
+					</ul>
+					<p id="see-more-button"> See more </p>
+				<h5 class="sidecontent-header" id="ad-header"> Suggested Pages <span id="see-all-button"> See all </span></h5>
 			</div>
 		</main>
 	</body>

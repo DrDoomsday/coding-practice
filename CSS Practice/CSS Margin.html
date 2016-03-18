@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			p {
+				background-color: yellow;
+			}
+			
+			p.ex {
+				margin-top: 200px;
+				margin-bottom: 200px;
+				margin-right: 300px;
+				margin-left: 300px;
+			}
+
+			p.exs {
+				margin: 25px 50px;
+			}		
+		</style>
+	</head>
+
+	<body>
+
+		<p>
+			This paragraph has no specified margins.
+		</p>
+
+		<p class="ex">
+			This paragraph has specified margins.
+		</p>
+
+		<p class="exs">
+			This paragraph has only 2 numbers (25 and 50).
+			<br>The 1st number specifies top/bottom.
+			<br>The 2nd number specifies right/left.
+			<br>Order- top,bottom,right,left.
+	</body>
+</html>
+
+<!-- Ask Paul why the background color doesn't cover the whole paragraph -->

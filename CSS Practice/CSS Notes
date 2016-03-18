@@ -1,0 +1,50 @@
+Pseudo-classes- :pseudo-class
+Pseudo-element- ::pseudo-element 
+NOTE: ::first-line/::first-letter pseudo-elements can only be applied to block-level elements.
+The ::before and ::after Pseudo-elements can be used to add content before and after an element, like an h1 or p element.
+
+
+
+
+
+/* Need help creating backgrounds using url images */
+/* Here is the code for url images just so I can practice */
+body {
+	background-image: url()
+	background-repeat: no-repeat;
+	background-repeat: repeat-x; repeat-y;
+	background-position: right top;
+}
+/* alt. code for background is {
+	background: #ffffff url() no-repeat right top;
+	margin-right:200px
+}
+
+
+
+x is the horizontal axis
+y is the vertical axis
+no-repeat keeps the image from repeating across the page
+background-position can be set based on top and bottom/ left and right
+background-attachment sets whether the background is fixed or scrolls with the rest of the page
+When using the shorthand property the order of the property values is:
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+
+/* CSS Box Model */
+(SMALLEST BOX)Content - The content of the box, where text and images appear
+(BIGGER BOX)Padding - Clears an area around the content. The padding is transparent
+(SLIGHTLY BIGGER BOX)Border - A border that goes around the padding and content
+(BIGGEST BOX)Margin - Clears an area outside the border. The margin is transparent
+
+The total width of an element should be calculated like this:
+
+Total element width = width + left padding + right padding + left border + right border + left margin + right margin
+
+The total height of an element should be calculated like this:
+
+Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin

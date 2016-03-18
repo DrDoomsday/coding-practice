@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+
+	<body>
+		<p id="paragraph">
+			Some text.
+		</p>
+		<script type="application/javascript">
+			var paragraph = document.getElementById('paragraph');
+			debugger;
+			paragraph.innerHTML="some other text";
+			paragraph.setAttribute("foo", "color:blue");
+			paragraph.onclick = function() {
+				alert("hello");
+			};
+		</script>
+	</body>
+</html>
