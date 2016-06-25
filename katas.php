@@ -7,3 +7,5 @@ function capitalize($string) {
 }
 
 echo capitalize($string);
+
+echo $string;
