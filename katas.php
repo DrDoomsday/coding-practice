@@ -20,21 +20,11 @@ function cRaZyCaSe($string) {
 	$nextIsLower = true;
 	for($i = 0;$i <= strlen($string); $i++) {
 		$letter = substr($string, $i, 1);
-		if($nextIsLower === true) {
-			$crazyString = $crazyString . strtolower($letter);
-			$nextIsLower = false;
-		} else {
-			$crazyString = $crazyString . strtoupper($letter);
-			$nextIsLower = true;
-		}
+		$letter = $nextIsLower ? strtolower($letter) : strtoupper($letter);
+		$crazyString = $crazyString . $letter;
+		$nextIsLower = !$nextIsLower;
 	}
 	return $crazyString;
 }
 
 echo cRaZyCaSe('ruSSELl');
-echo cRaZyCaSe('RUSSELL');
-echo cRaZyCaSe('russell');
-echo cRaZyCaSe('RUSSell');
-
-rUsSeLl;
-
