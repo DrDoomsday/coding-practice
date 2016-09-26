@@ -8,7 +8,10 @@
 		<form action="random-hero.php" method="post">
 			<?php
 				foreach($heroes as $singleHero) { ?>
-					<input style="display:block"; type="checkbox" name="hero" value="1"><?php print $singleHero;
+					<input style="display:block"; type="checkbox" name="hero" value="<?php $value?>">
+					<?php 
+						print $singleHero
+						$value++;
 				}?>
 			<input type="submit" value="submit">
 		</form>
