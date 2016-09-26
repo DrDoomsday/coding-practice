@@ -7,11 +7,10 @@
 		<h1>Heroes List</h1>
 		<form action="random-hero.php" method="post">
 			<?php
-				foreach($heroes as $singleHero) { ?>
-					<input style="display:block"; type="checkbox" name="hero" value="<?php $value?>">
-					<?php 
-						print $singleHero
-						$value++;
+				foreach($heroes as $singleHero) {?>
+					<input style="display:block"; type="checkbox" name="<?php print $singleHero?>" value="1">
+					<?php
+						print $singleHero;
 				}?>
 			<input type="submit" value="submit">
 		</form>
