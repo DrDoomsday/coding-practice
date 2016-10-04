@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<table>
+			<?php
+				foreach($validationData as $tableData) {?>
+				 <tr> 
+				<th>Name</th>
+				<th>Month</th>
+				<th>Criteria 1</th>
+				<th>Criteria 2</th>
+				<th>Criteria 3</th>
+				<th>Criteria 4</th>
+				<th>Criteria 5</th>
+			</tr>
+				}
+			<br>
+			<input type="submit" value="submit">Upload
+			<!-- needs to upload to MySQL but check data for errors, give specific error messages and then resubmit to this page. Need to intersperse PHP through table to supply the database information -->
+	</body>
+</html>
