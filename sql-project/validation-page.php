@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+	require('validation-database.php');
+	$db = new Database;
+
+	var_dump($db);
+?>
 <html>
 	<head>
 	</head>
