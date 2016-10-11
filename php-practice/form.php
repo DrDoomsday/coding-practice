@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html>
-<body>
+<?php
+	/*
+		This will be where the to-do list interacts with the database.
+		It will need to 
+			1 - access the database
+			2 - transpose into To-do list file
+	*/
 
-	<p> <?php 
-		if(isset($_POST["name"])) {
-			echo ($_POST["name"]."is most important");
+		class Database {
+		const USERNAME = 'root';
+		const PASSWORD = '1234';
+
+		public function query($query) {
+			$mysqli = new mysqli("localhost", self::USERNAME, self::PASSWORD, "to_do");
+			$result = $mysqli->query($query);
+			
+			return $result;
 		}
-		?>
-	</p>
-</body>
-</html>
+	}
