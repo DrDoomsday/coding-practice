@@ -19,4 +19,3 @@ if ($conn->connect_error) {
 
 $sql = "SELECT Numbers, Name, Due_Date, Complete_Date FROM to_do";
 $results = $conn->query($sql);
-var_dump($results);
