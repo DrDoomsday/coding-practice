@@ -23,8 +23,3 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-// top line is for rdripley.com website
-// $sql = "SELECT Numbers, Name, Due_Date, Complete_Date FROM formList";
-// this line is for localhost
-$sql = "SELECT Numbers, Name, Due_Date, Complete_Date FROM to_do";
-$results = $conn->query($sql);

@@ -1,6 +1,12 @@
 <?php 
 require('listForm.php');
 
+// top line is for rdripley.com website
+// $sql = "SELECT Numbers, Name, Due_Date, Complete_Date FROM formList";
+// this line is for localhost
+$sql = "SELECT Numbers, Name, Due_Date, Complete_Date FROM to_do";
+$results = $conn->query($sql);
+
 $toDos = array();
 
 while ($result = $results->fetch_assoc()) {
@@ -42,7 +48,7 @@ while ($result = $results->fetch_assoc()) {
 		?>
 	</table>
 	<br>
-	<form action="createItem.php">
+	<form action="createItem.php" method="post">
 		Name of Item: <input type="text" name="itemName"><br>
 		Due Date: <input type="text" name="dueDate"><br>
 		<input type="submit" value="Add">
