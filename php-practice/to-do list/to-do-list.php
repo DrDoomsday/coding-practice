@@ -4,7 +4,7 @@ require('listForm.php');
 // top line is for rdripley.com website
 // $sql = "SELECT Numbers, Name, Due_Date, Complete_Date FROM formList";
 // this line is for localhost
-$sql = "SELECT Numbers, Name, Due_Date FROM to_do";
+$sql = "SELECT * FROM to_do ORDER BY Numbers ASC";
 $results = $conn->query($sql);
 
 $toDos = array();
@@ -12,7 +12,6 @@ $toDos = array();
 while ($result = $results->fetch_assoc()) {
 	array_push($toDos, $result);
 }
-
 ?>
 <head>
 	<title>To Do List</title>
@@ -22,16 +21,17 @@ while ($result = $results->fetch_assoc()) {
 	<!-- first table will be the To-Do section -->
 	<table>
 		<tr>
-			<th>Number</th>
+			<th>#</th>
 			<th>Name of Item</th>
 			<th>Due Date</th>
 			<th>Complete</th>
 		</tr>
-		<?php 
+		<?php
+			$number = 1;
 			foreach ($toDos as $toDo) { ?>
 				<tr>
 					<!-- Consequtive integer will start 1 and will iterate up as the forloop supplies the items -->
-					<td><?php echo $toDo['Numbers'];?></td>
+					<td><?php echo $number++ ?></td>
 					<td><?php echo $toDo['Name'];?></td>
 					<td><?php echo $toDo['Due_Date'];?></td>
 					<td>
