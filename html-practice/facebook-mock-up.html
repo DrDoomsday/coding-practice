@@ -46,10 +46,13 @@
 			}
 			.content {
 				width: 976px;
-				height: 1000px;
-				margin: 55px auto;
+				margin: 0px auto;
+			}
+			main.content {
+				margin-top: 55px;
 			}
 			.main-column {
+				height: 1000px;
 				float: left;
 				box-sizing: border-box;
 				display: block;
@@ -176,6 +179,16 @@
 				margin: 0;
 				padding: 5px 0 0;
 			}
+			#favorites-list-formatting {
+				padding: 0;
+				margin: 0;
+			}
+			#ad-content {
+				height: 700px;
+				width: 25%;
+				background-color: white;
+				border: 1px solid #e9eaed;
+			}
 			#sidecontent-list-formatting {
 				padding: 0;
 				margin: 0;
@@ -208,6 +221,7 @@
 			#ad-links-content {
 				display: inline-block;
 				margin: 0;
+				color: #666;
 			}
 			#see-more-button {
 				color: blue;
@@ -221,12 +235,15 @@
 	</head>
 	<body>
 		<header id="facebook-menu-bar">
-			<input type="text" id="search-bar" placeholder="Search Facebook">
-			<ul class="facebook-menu-items">
-				<li id="facebook-menu-list"><a href="#">Russell</a></li>
-				<li id="facebook-menu-list"><a href="#">Home</a></li>
-				<li id="facebook-menu-list"><a href="#">Find Friends</a></li>
-				<li id="facebook-menu-list"><a href="#">Menu Items</a></li>
+			<div class="content">
+				<input type="text" id="search-bar" placeholder="Search Facebook">
+				<ul class="facebook-menu-items">
+					<li id="facebook-menu-list"><a href="#">Russell</a></li>
+					<li id="facebook-menu-list"><a href="#">Home</a></li>
+					<li id="facebook-menu-list"><a href="#">Find Friends</a></li>
+					<li id="facebook-menu-list"><a href="#">Menu Items</a></li>
+				</ul>
+			</div>
 		</header>
 		<main class="content">
 			<section class="main-column profile-content">
